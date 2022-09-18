@@ -144,41 +144,57 @@ while True:
     # generate minimal
     minset = {}
     count = 0
-    defi = np.ones(n)
+    defi = np.ones((n+1)**3)
     for i in range(n):
         if root[i] == 1:
             count += 1
             minset[count] = i
-            defi[i] = 0
+            defi[i+1] = 0
         elif leaf[i] == 1:
             count += 1
             minset[count] = i
-            defi[i] = 0
+            defi[i+1] = 0
     def test1():
         global gcp, count
         for i in range(n):
-            if defi[i]:
+            if defi[i+1]:
                 remove(i)
                 if not achieve(0):
                     count += 1
                     minset[count] = i
-                    defi[i] = 0
+                    defi[i+1] = 0
                 gcp = restore.copy()
     test1()
     def test2():
         global gcp, count
         for i in range(n):
-            if defi[i]:
+            if defi[i+1]:
                 for j in range(i+1, n):
-                    if defi[j]:
+                    if defi[j+1]:
                         remove(i)
                         remove(j)
                         if not achieve(0):
                             count += 1
-                            minset[count] = [i,j]
-                            # defi[i] = 0
+                            minset[count] = [i, j]
+                            defi[(i+1)*(n+1)+(j+1)] = 0
                         gcp = restore.copy()
     test2()
+    def test3():
+        global gcp, count
+        for i in range(n):
+            if defi[i+1]:
+                for j in range(i+1, n):
+                    if defi[j+1] and defi[(i+1)*(n+1)+(j+1)]:
+                        for k in range(j+1,n):
+                            if defi[k+1] and defi[(i+1)*(n+1)+(k+1)] and defi[(j+1)*(n+1)+(k+1)]:
+                                remove(i);remove(j);remove(k);
+                                if not achieve(0):
+                                    count+=1
+                                    minset[count] = [i, j, k]
+                                    defi[(i+1)*n**2+(j+1)*n+(k+1)] = 0
+                                gcp = restore.copy()
+    test3()
+    # print(minset)
     # Prune
     minc = 1e9
     item = -1
