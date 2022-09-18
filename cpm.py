@@ -2,18 +2,15 @@ import numpy as np
 import pandas as pd
 
 n = 14
-p = [5, 6, 9, 12, 7,
-     12, 10, 6, 10, 9,
-     7, 8, 7, 5]
+# p = [5, 6, 9, 12, 7,
+#      12, 10, 6, 10, 9,
+#      7, 8, 7, 5]
+p = [5 , 5 , 9 ,12 , 7 ,11, 10 , 6, 10 , 9 , 4  ,5  ,7,  5]
 p = np.array(p)
 relation_dic = np.array(pd.read_csv('./cpm.csv'))
 depth = relation_dic.shape[0]
 leaf = np.ones(n)
 root = np.ones(n)
-s1 = np.zeros(n)
-c1 = np.zeros(n)
-s2 = np.zeros(n)
-c2 = 1e9 * np.ones(n)
 relation_mat = np.zeros([n, n])
 for i in range(n):
     for head in range(depth):
@@ -24,6 +21,11 @@ for i in range(n):
             print(i+1, '->', int(relation_dic[head, i]))
 print(leaf)
 print(root)
+# CPM
+s1 = np.zeros(n)
+c1 = np.zeros(n)
+s2 = np.zeros(n)
+c2 = 1e9 * np.ones(n)
 # Forward search
 degree = root.copy()
 def forward(head):
@@ -68,10 +70,15 @@ cp_nodes = [i for i in range(n) if c1[i] == c2[i]]
 print(cp_nodes)
 def output(path):
     print('->'.join(str(i) for i in path))
+def summation(path):
+    t = 0
+    for j in path:
+        t += p[j-1]
+    return t
 def deep(head):
     global path
     path.append(head+1)
-    if leaf[head]:
+    if leaf[head] and (summation(path) == cmax):
         output(path)
         del path[-1]
     else:
