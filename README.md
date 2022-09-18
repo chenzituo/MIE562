@@ -5,7 +5,8 @@ This repo is for implementation of canonical algos in MIE562
 Achieved:
 
 CPM
+Time/Costs Trade-offs Heuristic
 
 Not yet:
 
-Time/Costs Trad-off: Linear Cost
+Workforce Constraint
