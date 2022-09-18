@@ -1,11 +1,15 @@
 # MIE562
 
-Implemented:
+# Implemented
 
-CPM
+# 1 CPM
 
   cpm.py
   
-Trade-offs Heuristics
+# 2 Trade-offs Heuristics
 
   trade_heuristic.py
+  
+# Not yet
+
+# 3 Workforce constraint
