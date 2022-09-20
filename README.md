@@ -18,4 +18,4 @@ trade_heuristic.py
 
 4. Circle identification in directional graph
 
-5. Resources constraint program
+5. Resources constraint programming
