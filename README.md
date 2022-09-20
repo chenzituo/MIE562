@@ -2,7 +2,7 @@
 
 # Implemented
 
-1.CPM (multiroot and multileaf)
+1. CPM (multiroot and multileaf)
 
 cpm.py
 
@@ -10,7 +10,7 @@ cpm.py
 
 minimal_cutset.py
 
-3.Linear tradeoffs heuristic (minimal sets reduction)
+3. Linear tradeoffs heuristic (minimal sets reduction)
 
 trade_heuristic.py
 
