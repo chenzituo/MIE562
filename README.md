@@ -6,7 +6,7 @@
 
 cpm.py
 
-2. Minimal cut sets finding (3 max)
+2. Minimal cut sets finding (3 as max size of subset, 1 root for examination for now)
 
 minimal_cutset.py
 
