@@ -16,9 +16,9 @@ trade_heuristic.py
 
 # Not yet
 
-4. JSP
+# Big Plan JSP
 
-5. Dispatch rule 
+4. Dispatch rule 
 
 5. Circle identification in directional graph
 
