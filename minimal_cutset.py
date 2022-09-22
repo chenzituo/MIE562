@@ -58,7 +58,7 @@ def test1():
             if not achieve(0):
                 count += 1
                 minset[count] = i+1
-                defi[i] = 0
+                defi[i+1] = 0
             gcp = relation_mat.copy()
 test1()
 def test2():
