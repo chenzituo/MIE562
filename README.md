@@ -16,6 +16,10 @@ trade_heuristic.py
 
 # Not yet
 
-4. Circle identification in directional graph
+4. JSP
 
-5. Resources constraint programming
+5. Dispatch rule 
+
+5. Circle identification in directional graph
+
+6. Resources constraint programming
