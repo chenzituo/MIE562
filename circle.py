@@ -81,10 +81,14 @@ def cpm():
     cp_nodes = [i for i in range(n) if c1[i] == c2[i]]
     # print(cp_nodes)
     def output(path):
-        global cmax
+        global cmax, imin, pmin, rmin
         if (summation(path) == cmax):
-            print('->'.join(str(i+1) for i in path))
-            print(cmax)
+            # print('->'.join(str(i+1) for i in path))
+            # print(cmax)
+            if cmax < imin:
+                imin = cmax
+                pmin = path.copy()
+                rmin = relation_mat.copy()
     def summation(path):
         t = 0
         for j in path:
@@ -138,7 +142,7 @@ def loopid():
             if bl:
                 return 1 
         return 0 
-    def output(path, idt):
+    def endd(path, idt):
         global count_loop, path_set
         path.append(idt)
         mark = 0
@@ -160,7 +164,7 @@ def loopid():
     def deep(head):
         global path, ident
         if (head+1) in path:
-            output(path, head+1)
+            endd(path, head+1)
             del path[-1]
         else:
             path.append(head+1)
@@ -173,9 +177,17 @@ def loopid():
         path = []
         deep(i)
     return count_loop
+rmin = np.zeros([n, n])
+pmin = []
+imin = 1e9
 for x in range(ls):
     relation_mat = restore.copy()
     generate(x)
     bl = loopid()
     if not bl:
         cpm()
+# print(pmin)
+print('Complete Result')
+print('->'.join(str(i+1) for i in pmin))
+print(imin)
+print(rmin)      
