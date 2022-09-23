@@ -18,10 +18,10 @@ trade_heuristic.py + cpm.csv
 
 loopid.py + disp.csv
 
+5. Resource constraint (3 resources, using circle directional trials)
+
+circle.py + patch.csv
+
 # Not yet
 
-# Big Plan JSP
-
-5. Dispatch rule 
-
-6. Resources constraint programming
+6. Dispatch rule 
