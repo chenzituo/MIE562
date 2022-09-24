@@ -18,9 +18,11 @@ trade_heuristic.py + cpm.csv
 
 loopid.py + disp.csv
 
-5. Resource constraint (3 resources, using circle directional trials)
+5. JSP - Resource constraint (3 resources, using circle directional trials)
 
 circle.py + patch.csv
+
+for versatile models, refer to P2.2
 
 # Not yet
 
