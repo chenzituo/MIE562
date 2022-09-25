@@ -24,6 +24,10 @@ circle.py + patch.csv
 
 for versatile models, refer to P2.2
 
+6. EDD - Single machine, assignment 1
+
+edd.py
+
 # Not yet
 
-6. Dispatch rule 
+7. Dispatch rule 
