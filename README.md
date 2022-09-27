@@ -26,8 +26,10 @@ for versatile models, refer to P2.2
 
 6. EDD - Single machine, assignment 1
 
-edd.py
+edd.py, coding1.py(without external modules)
 
 # Not yet
 
-7. Dispatch rule 
+7. Dispatch rule
+
+8. Mixed Integer Programming
