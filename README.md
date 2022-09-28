@@ -28,8 +28,10 @@ for versatile models, refer to P2.2
 
 edd.py, coding1.py(without external modules)
 
-# Not yet
+7. Dispatch rule (SPT)
 
-7. Dispatch rule
+spt.py
+
+# Not yet
 
 8. Mixed Integer Programming
