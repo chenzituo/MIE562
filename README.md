@@ -35,3 +35,13 @@ spt.py
 # Not yet
 
 8. Mixed Integer Programming
+
+# Project
+
+9. Time-indexed MIP for Farm Optimization
+
+mip.py (fixed growth time)
+
+mip_norelax.py (dynamic growth time)
+
+data.csv (crop information)
