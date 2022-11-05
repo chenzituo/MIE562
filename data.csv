@@ -1,0 +1,8 @@
+﻿Name,Selling price (dollars per bushel),Production (bushel per acre),Variable cost (bushel per acre),Time to maturity LB (days),Time to maturity UB (days),Growing Season (time index interval),,,
+Barley,5.15,75.45,179,60,90,60,240,0,0
+Corn,4.8,181,346,110,120,280,285,0,0
+Oats,3.3,65.56,130,80,90,60,180,0,0
+Rice,14.1,128.03,558,150,210,60,210,0,0
+Sorghum,4.7,69.49,144,110,140,60,240,0,0
+Soybean,10.5,51.5,192,90,150,120,150,0,0
+Wheat,6.5,49.09,135,90,100,30,150,210,360
